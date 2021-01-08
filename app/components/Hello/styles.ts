@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
     alignSelf: 'center',
+    margin: 40,
   },
   buttons: {
     flexDirection: 'row',
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
     paddingVertical: 0,
   },
   greeting: {
-    color: '#999',
+    color: '#000',
     fontWeight: 'bold',
   },
 })

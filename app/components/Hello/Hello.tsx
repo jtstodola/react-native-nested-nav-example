@@ -19,27 +19,7 @@ const Hello: React.FC<HelloProps> = ({ name, enthusiasmLevel }) => {
     Array(numChars + 1).join('!')
   return (
     <View style={styles.root}>
-      <Text style={styles.greeting}>
-        Hello {name + getExclamationMarks(currentEnthusiasmLevel || 0)}
-      </Text>
-      <View style={styles.buttons}>
-        <View style={styles.button}>
-          <Button
-            title="-"
-            onPress={onDecrement}
-            accessibilityLabel="decrement"
-            color="red"
-          />
-        </View>
-        <View style={styles.button}>
-          <Button
-            title="+"
-            onPress={onIncrement}
-            accessibilityLabel="increment"
-            color="blue"
-          />
-        </View>
-      </View>
+      <Text style={styles.greeting}>Hello World!</Text>
     </View>
   )
 }
