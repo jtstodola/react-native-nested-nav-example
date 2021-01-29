@@ -2,20 +2,11 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   root: {
+    justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
     margin: 40,
-  },
-  buttons: {
-    flexDirection: 'row',
-    minHeight: 70,
-    alignItems: 'stretch',
-    alignSelf: 'center',
-    borderWidth: 5,
-  },
-  button: {
-    flex: 1,
-    paddingVertical: 0,
+    height: '100%',
   },
   greeting: {
     color: '#000',
