@@ -23,7 +23,7 @@ const Home: React.FC<HelloProps> = () => {
           style={{
             width: screen.width,
             height: screen.height,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             paddingTop: 48,
           }}
         >

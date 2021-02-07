@@ -1,7 +1,8 @@
 import Home from './Home/Home'
-import Thing1 from './Thing1/Thing1'
-import Thing2 from './Thing2/Thing2'
+import Terminology from './Terminology/Terminology'
+import Boats from './Boats/Boats'
+import BoatInformation from './BoatInformation/BoatInformation'
 import Settings from './Settings/Settings'
 import Splash from './Splash/Splash'
 
-export { Home, Settings, Splash, Thing1, Thing2 }
+export { Home, Settings, Splash, Terminology, Boats, BoatInformation }
