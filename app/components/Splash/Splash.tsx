@@ -2,12 +2,12 @@ import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
 import { Pressable, Text, View } from 'react-native'
 
-import { TabNavigationStackParamsList } from '../../types'
+import { RootNavigatorParamsList } from '../../types'
 import styles from './styles'
 
 export interface SplashProps {
   // StackNavigationProp<Params list, name of current route>
-  navigation: StackNavigationProp<TabNavigationStackParamsList, 'Tabs'>
+  navigation: StackNavigationProp<RootNavigatorParamsList, 'Tabs'>
 }
 
 const Splash: React.FC<SplashProps> = ({ navigation }) => {

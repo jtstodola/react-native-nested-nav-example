@@ -11,7 +11,7 @@ import {
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import Images from '../../assets/images'
-import { BoatsParamList } from '../../types'
+import { BoatParams, RootNavigationProps } from '../../types'
 import boats from './boats'
 import { styles } from './styles'
 
@@ -20,7 +20,7 @@ interface ButtonProps {
 }
 
 interface BoatsProps {
-  navigation: StackNavigationProp<BoatsParamList, 'BoatsList'>
+  navigation: RootNavigationProps
 }
 
 const Button: React.FC<ButtonProps> = ({ children, onPress }) => {
@@ -73,15 +73,16 @@ const Boats: React.FC<BoatsProps> = ({ navigation }) => {
             showsVerticalScrollIndicator={false}
             style={{ marginHorizontal: 24, paddingTop: 12 }}
           >
-            {boats.map((boat: any) => {
-              const { name, params } = boat
+            {boats.map((boat: BoatParams) => {
               return (
                 <Button
                   key={boat.name}
                   onPress={() =>
-                    navigation.navigate('BoatInformation', {
-                      name,
-                      ...params,
+                    navigation.navigate('Modal', {
+                      screen: 'BoatInformation',
+                      params: {
+                        ...boat,
+                      },
                     })
                   }
                 >

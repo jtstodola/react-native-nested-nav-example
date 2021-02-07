@@ -1,4 +1,4 @@
-import { NavigationContainer, RouteProp } from '@react-navigation/native'
+import { RouteProp } from '@react-navigation/native'
 import React from 'react'
 import {
   Dimensions,
@@ -11,12 +11,12 @@ import {
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import Images from '../../assets/images'
-import { BoatsParamList } from '../../types'
+import { RootNavigationProps, ModalNavigatorParamsList } from '../../types'
 import { styles } from './styles'
 
 export interface BoatInformationProps {
-  navigation: any
-  route: RouteProp<BoatsParamList, 'BoatInformation'>
+  navigation: RootNavigationProps
+  route: RouteProp<ModalNavigatorParamsList, 'BoatInformation'>
 }
 
 const BoatInformation: React.FC<BoatInformationProps> = ({
@@ -24,7 +24,6 @@ const BoatInformation: React.FC<BoatInformationProps> = ({
   route,
 }) => {
   const screen = Dimensions.get('window')
-  console.log({ route })
   const {
     params: { name, text, image, credit },
   } = route

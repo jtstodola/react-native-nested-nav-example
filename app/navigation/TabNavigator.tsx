@@ -1,30 +1,11 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import {
-  Home,
-  Terminology,
-  Boats,
-  BoatInformation,
-  Settings,
-} from '../components'
-import { createStackNavigator } from '@react-navigation/stack'
+import { Home, Terminology, Boats, Settings } from '../components'
 import { View, Text } from 'react-native'
 import { Icon } from 'react-native-elements'
 
 const TabStack = createBottomTabNavigator()
-const BoatStack = createStackNavigator()
-
-const BoatNavigator = () => {
-  const { Navigator, Screen } = BoatStack
-
-  return (
-    <Navigator initialRouteName="BoatsList" headerMode="none">
-      <Screen name="BoatsList" component={Boats} />
-      <Screen name="BoatInformation" component={BoatInformation} />
-    </Navigator>
-  )
-}
 
 interface TabContainerProps {
   label?: string
@@ -113,7 +94,7 @@ const TabNavigator = () => {
     >
       <Screen name="Home" component={Home} />
       <Screen name="Terminology" component={Terminology} />
-      <Screen name="Boats" component={BoatNavigator} />
+      <Screen name="Boats" component={Boats} />
       <Screen name="Settings" component={Settings} />
     </Navigator>
   )
