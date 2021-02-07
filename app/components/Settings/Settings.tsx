@@ -22,11 +22,19 @@ const Settings: React.FC<HelloProps> = () => {
             width: screen.width,
             height: screen.height,
             backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            paddingTop: 48,
           }}
         >
-          <Text style={{ textAlign: 'center', fontSize: 40, color: '#FFF' }}>
-            Boats
+          <Text
+            style={{
+              paddingTop: 48,
+              paddingBottom: 8,
+              textAlign: 'center',
+              fontSize: 40,
+              color: '#CCCCCC',
+              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            }}
+          >
+            Settings
           </Text>
         </View>
       </ImageBackground>

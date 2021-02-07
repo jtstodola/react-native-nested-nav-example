@@ -41,10 +41,10 @@ const TabContainer: React.FunctionComponent<TabContainerProps> = ({
       <View
         style={{
           borderTopWidth: 1,
-          borderTopColor: 'green',
+          borderTopColor: '#31AAB7',
           alignItems: 'center',
           flex: 1,
-          paddingTop: 4,
+          paddingTop: 7,
         }}
       >
         {children}
@@ -52,7 +52,7 @@ const TabContainer: React.FunctionComponent<TabContainerProps> = ({
       </View>
     ) : (
       <View
-        style={{ width: '100%', alignItems: 'center', flex: 1, paddingTop: 5 }}
+        style={{ width: '100%', alignItems: 'center', flex: 1, paddingTop: 8 }}
       >
         {children}
         <Text style={{ color: '#ACBAC3', marginTop: 6 }}>{label}</Text>
