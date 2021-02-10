@@ -11,9 +11,10 @@ import {
 import Images from '../../assets/images'
 import terms from './terms'
 import { styles } from './styles'
+import { RootNavigationProps } from '../../types'
 
 export interface TerminologyProps {
-  navigation: any
+  navigation: RootNavigationProps
 }
 
 const Terminology: React.FC<TerminologyProps> = ({ navigation }) => {

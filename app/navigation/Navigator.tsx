@@ -7,24 +7,6 @@ import {
 import { Splash } from '../screens'
 import TabNavigator from './TabNavigator'
 import ModalNavigator from './ModalNavigator'
-import { Route } from '@react-navigation/native'
-import { ModalNavigatorParamsList } from '../types'
-
-// Each navigator needs to have it's own stack
-// Why?
-const MainStack = createStackNavigator()
-const TopStack = createStackNavigator()
-
-const TopNavigator: React.FC = () => {
-  const { Navigator, Screen } = TopStack
-
-  return (
-    <Navigator headerMode="none" initialRouteName="Splash">
-      <Screen name="Splash" component={Splash} />
-      <Screen name="Tabs" component={TabNavigator} />
-    </Navigator>
-  )
-}
 
 const modalScreenOptions: StackNavigationOptions = {
   cardOverlayEnabled: true,
@@ -44,6 +26,22 @@ const modalScreenOptions: StackNavigationOptions = {
       }),
     },
   }),
+}
+
+// Each navigator needs to have it's own stack
+// Why?
+const MainStack = createStackNavigator()
+const TopStack = createStackNavigator()
+
+const TopNavigator: React.FC = () => {
+  const { Navigator, Screen } = TopStack
+
+  return (
+    <Navigator headerMode="none" initialRouteName="Splash">
+      <Screen name="Splash" component={Splash} />
+      <Screen name="Tabs" component={TabNavigator} />
+    </Navigator>
+  )
 }
 
 const MainNavigator: React.FC = () => {
