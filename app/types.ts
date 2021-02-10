@@ -14,6 +14,7 @@ export interface BoatParams {
 
 export type ModalNavigatorParamsList = {
   BoatInformation: BoatParams
+  Definition: { word: string; definition: string }
 }
 
 // when we have a nested params list, we need to wrap it in NavigatorScreenParams in order

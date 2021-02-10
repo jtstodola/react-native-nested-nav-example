@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import { Home, Terminology, Boats, Settings } from '../components'
+import { Home, Terminology, Boats, Settings } from '../screens'
 import { View, Text } from 'react-native'
 import { Icon } from 'react-native-elements'
 
