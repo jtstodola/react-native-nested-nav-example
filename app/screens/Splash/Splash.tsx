@@ -1,6 +1,7 @@
 import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
-import { Pressable, Text, View } from 'react-native'
+import { Image, Pressable, Text, TouchableOpacity, View } from 'react-native'
+import Images from '../../assets/images'
 
 import { RootNavigatorParamsList } from '../../types'
 import styles from './styles'
@@ -14,9 +15,13 @@ const Splash: React.FC<SplashProps> = ({ navigation }) => {
   return (
     <View style={styles.root}>
       <Text style={styles.greeting}>Hello World!</Text>
-      <Pressable onPress={() => navigation.navigate('Tabs')}>
-        <Text>Button</Text>
-      </Pressable>
+      <Image source={Images.logo} style={{ height: 150, width: 150 }} />
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('Tabs')}
+      >
+        <Text style={styles.buttontext}>Enter the Harbor</Text>
+      </TouchableOpacity>
     </View>
   )
 }

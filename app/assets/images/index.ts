@@ -1,3 +1,4 @@
+import antonShakirovLighthouse from './antonShakirovLighthouse.jpg'
 import background1 from './background1.jpg'
 import background2 from './background2.jpg'
 import background3 from './background3.jpg'
@@ -14,8 +15,10 @@ import gameBoat from './gameBoat.jpg'
 import houseBoat from './houseboat.jpg'
 import motorYacht from './motorYacht.jpg'
 import trawlerBoat from './trawlerBoat.jpg'
+import logo from './logo.png'
 
 const images = {
+  antonShakirovLighthouse,
   background1,
   background2,
   background3,
@@ -32,6 +35,7 @@ const images = {
   houseBoat,
   motorYacht,
   trawlerBoat,
+  logo,
 }
 
 export default images
