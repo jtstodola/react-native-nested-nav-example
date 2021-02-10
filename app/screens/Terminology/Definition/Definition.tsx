@@ -1,13 +1,6 @@
 import { RouteProp } from '@react-navigation/native'
 import React from 'react'
-import {
-  Dimensions,
-  Image,
-  ImageBackground,
-  ScrollView,
-  Text,
-  View,
-} from 'react-native'
+import { Dimensions, Text, View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import Images from '../../../assets/images'
