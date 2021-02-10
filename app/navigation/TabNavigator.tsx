@@ -1,9 +1,10 @@
 import React from 'react'
+import { View, Text } from 'react-native'
+import { Icon } from 'react-native-elements'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { Home, Terminology, Boats, Settings } from '../screens'
-import { View, Text } from 'react-native'
-import { Icon } from 'react-native-elements'
+import HomeNavigator from './HomeNavigator'
 
 const TabStack = createBottomTabNavigator()
 
@@ -92,7 +93,7 @@ const TabNavigator = () => {
         },
       })}
     >
-      <Screen name="Home" component={Home} />
+      <Screen name="Home" component={HomeNavigator} />
       <Screen name="Terminology" component={Terminology} />
       <Screen name="Boats" component={Boats} />
       <Screen name="Settings" component={Settings} />

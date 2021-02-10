@@ -27,6 +27,7 @@ export type RootNavigatorParamsList = {
 
 export type TabNavigatorParamsList = {
   Home: undefined
+  Profile: undefined
   Terminology: undefined
   Boats: undefined
   Settings: undefined

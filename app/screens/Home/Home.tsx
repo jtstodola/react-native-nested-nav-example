@@ -17,7 +17,7 @@ export interface HomeProps {
   navigation: RootNavigationProps
 }
 
-const Home: React.FC<HomeProps> = () => {
+const Home: React.FC<HomeProps> = ({ navigation }) => {
   const screen = Dimensions.get('window')
 
   console.log(screen.width)
@@ -53,7 +53,7 @@ const Home: React.FC<HomeProps> = () => {
               Welcome to the Harbor!
             </Text>
             <Pressable
-              onPress={() => console.log('nav')}
+              onPress={() => navigation.navigate('Profile')}
               style={{
                 position: 'absolute',
                 right: 0,
