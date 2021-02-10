@@ -1,10 +1,9 @@
 import React from 'react'
 import {
-  Button,
   Dimensions,
   ImageBackground,
-  Pressable,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native'
 import { Icon } from 'react-native-elements'
@@ -38,9 +37,8 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
         >
           <View
             style={{
-              flexDirection: 'row',
               alignItems: 'center',
-              justifyContent: 'center',
+              height: '100%',
             }}
           >
             <Text
@@ -48,20 +46,24 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
                 textAlign: 'center',
                 fontSize: 24,
                 color: '#FFF',
+                marginTop: 160,
               }}
             >
               Welcome to the Harbor!
             </Text>
-            <Pressable
-              onPress={() => navigation.navigate('Profile')}
-              style={{
-                position: 'absolute',
-                right: 0,
-              }}
-            >
-              <Icon type="font-awesome" name="user" color="#fff" />
-            </Pressable>
           </View>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Profile')}
+            style={{
+              position: 'absolute',
+              right: 20,
+              top: 60,
+              padding: 8,
+            }}
+          >
+            <Icon type="font-awesome" name="user" color="#fff" />
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>

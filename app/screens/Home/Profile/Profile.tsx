@@ -72,7 +72,7 @@ const Profile: React.FC<ProfileProps> = ({ navigation }) => {
               Profile
             </Text>
             <TouchableOpacity
-              style={{ position: 'absolute', top: 60, left: 24 }}
+              style={{ position: 'absolute', top: 50, left: 20, padding: 8 }}
               onPress={() => navigation.goBack()}
             >
               <Icon type="font-awesome" name="arrow-left" color="#fff" />
