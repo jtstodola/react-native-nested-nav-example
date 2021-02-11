@@ -1,7 +1,7 @@
 import { CompositeNavigationProp } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
-import { Image, Pressable, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import Images from '../../assets/images'
 
 import { RootNavigatorParamsList, TopNavigatorParamsList } from '../../types'

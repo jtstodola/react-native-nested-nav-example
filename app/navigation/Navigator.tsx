@@ -3,7 +3,6 @@ import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack'
-import { RouteProp } from '@react-navigation/native'
 
 import { Splash } from '../screens'
 import TabNavigator from './TabNavigator'
@@ -11,7 +10,6 @@ import TabNavigator from './TabNavigator'
 import ModalNavigator from './ModalNavigator'
 import { RootNavigatorParamsList, TopNavigatorParamsList } from '../types'
 
-//
 const modalScreenOptions: StackNavigationOptions = {
   cardOverlayEnabled: true,
   cardStyle: { backgroundColor: 'transparent', opacity: 1 },
@@ -40,7 +38,7 @@ const modalScreenOptions: StackNavigationOptions = {
 const MainStack = createStackNavigator<RootNavigatorParamsList>()
 const TopStack = createStackNavigator<TopNavigatorParamsList>()
 
-const TopNavigator: React.FC = () => {
+const MainNavigator: React.FC = () => {
   const { Navigator, Screen } = TopStack
 
   return (
@@ -51,7 +49,7 @@ const TopNavigator: React.FC = () => {
   )
 }
 
-const MainNavigator: React.FC = () => {
+const RootNavigator: React.FC = () => {
   const { Navigator, Screen } = MainStack
 
   return (
@@ -71,10 +69,10 @@ const MainNavigator: React.FC = () => {
         }
       }}
     >
-      <Screen name="Top" component={TopNavigator} />
+      <Screen name="Main" component={MainNavigator} />
       <Screen name="Modal" component={ModalNavigator} />
     </Navigator>
   )
 }
 
-export default MainNavigator
+export default RootNavigator
