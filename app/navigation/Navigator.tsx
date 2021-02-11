@@ -3,12 +3,11 @@ import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack'
-
 import { Splash } from '../screens'
+import { RootNavigatorParamsList, TopNavigatorParamsList } from '../types'
 import TabNavigator from './TabNavigator'
 // import TabNavigator from './TabNavigator1'
 import ModalNavigator from './ModalNavigator'
-import { RootNavigatorParamsList, TopNavigatorParamsList } from '../types'
 
 const modalScreenOptions: StackNavigationOptions = {
   cardOverlayEnabled: true,

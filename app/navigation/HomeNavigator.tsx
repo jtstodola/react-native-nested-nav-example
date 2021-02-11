@@ -1,10 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-
 import { Home, Profile } from '../screens'
 
-// Each navigator needs to have it's own stack
-// Why?
 const HomeStack = createStackNavigator()
 
 const MainNavigator: React.FC = () => {

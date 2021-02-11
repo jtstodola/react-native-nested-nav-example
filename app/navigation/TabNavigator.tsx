@@ -2,11 +2,11 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import { Icon } from 'react-native-elements'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-
 import { Terminology, Boats, Settings } from '../screens'
+import { TabNavigatorParamsList } from '../types'
 import HomeNavigator from './HomeNavigator'
 
-const TabStack = createBottomTabNavigator()
+const TabStack = createBottomTabNavigator<TabNavigatorParamsList>()
 
 interface TabContainerProps {
   label?: string

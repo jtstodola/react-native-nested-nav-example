@@ -1,11 +1,9 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-
 import { BoatInformation, Definition } from '../screens'
+import { ModalNavigatorParamsList } from '../types'
 
-// Each navigator needs to have it's own stack
-// Why?
-const ModalStack = createStackNavigator()
+const ModalStack = createStackNavigator<ModalNavigatorParamsList>()
 
 const ModalNavigator = () => {
   const { Navigator, Screen } = ModalStack
