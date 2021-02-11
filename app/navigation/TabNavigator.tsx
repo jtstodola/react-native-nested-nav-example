@@ -94,8 +94,8 @@ const TabNavigator = () => {
       })}
     >
       <Screen name="Home" component={HomeNavigator} />
-      <Screen name="Terminology" component={Terminology} />
       <Screen name="Boats" component={Boats} />
+      <Screen name="Terminology" component={Terminology} />
       <Screen name="Settings" component={Settings} />
     </Navigator>
   )

@@ -17,7 +17,6 @@ import {
   TabNavigatorParamsList,
 } from '../../types'
 import boats from './boatList'
-import { styles } from './styles'
 
 interface ButtonProps {
   onPress: () => void

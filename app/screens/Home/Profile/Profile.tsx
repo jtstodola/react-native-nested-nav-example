@@ -46,7 +46,6 @@ const Profile: React.FC<ProfileProps> = ({ navigation }) => {
   const screen = Dimensions.get('window')
   const { firstName, lastName, username, email, address } = userProfile
 
-  console.log(screen.width)
   return (
     <View>
       <ImageBackground

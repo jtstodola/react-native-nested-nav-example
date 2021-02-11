@@ -3,11 +3,15 @@ import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack'
-import { Splash } from '../screens'
-import { RootNavigatorParamsList, TopNavigatorParamsList } from '../types'
+import { BoatInformation, Definition, Splash } from '../screens'
+import {
+  ModalNavigatorParamsList,
+  RootNavigatorParamsList,
+  TopNavigatorParamsList,
+} from '../types'
 import TabNavigator from './TabNavigator'
 // import TabNavigator from './TabNavigator1'
-import ModalNavigator from './ModalNavigator'
+// import ModalNavigator from './ModalNavigator'
 
 const modalScreenOptions: StackNavigationOptions = {
   cardOverlayEnabled: true,
@@ -34,11 +38,30 @@ const modalScreenOptions: StackNavigationOptions = {
 
 // In order to type the below route for the screen options,
 // send the type arguement when creating the navigator
-const MainStack = createStackNavigator<RootNavigatorParamsList>()
-const TopStack = createStackNavigator<TopNavigatorParamsList>()
+const RootStack = createStackNavigator<RootNavigatorParamsList>()
+const MainStack = createStackNavigator<TopNavigatorParamsList>()
+const ModalStack = createStackNavigator<ModalNavigatorParamsList>()
+
+const ModalNavigator = () => {
+  const { Navigator, Screen } = ModalStack
+
+  return (
+    <Navigator headerMode="none">
+      <Screen name="BoatInformation" component={BoatInformation} />
+      <Screen
+        name="Definition"
+        component={Definition}
+        options={{
+          cardOverlayEnabled: true,
+          cardStyle: { backgroundColor: 'rgba(0, 0, 0, 0.4)', opacity: 1 },
+        }}
+      />
+    </Navigator>
+  )
+}
 
 const MainNavigator: React.FC = () => {
-  const { Navigator, Screen } = TopStack
+  const { Navigator, Screen } = MainStack
 
   return (
     <Navigator headerMode="none" initialRouteName="Splash">
@@ -49,7 +72,7 @@ const MainNavigator: React.FC = () => {
 }
 
 const RootNavigator: React.FC = () => {
-  const { Navigator, Screen } = MainStack
+  const { Navigator, Screen } = RootStack
 
   return (
     <Navigator

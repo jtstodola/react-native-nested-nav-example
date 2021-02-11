@@ -18,7 +18,9 @@ const Splash: React.FC<SplashProps> = ({ navigation }) => {
   return (
     <View style={styles.root}>
       <Text style={styles.greeting}>Hello World!</Text>
+
       <Image source={Images.logo} style={{ height: 150, width: 150 }} />
+
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('Tabs')}

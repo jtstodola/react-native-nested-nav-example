@@ -4,7 +4,7 @@ import { Home, Profile } from '../screens'
 
 const HomeStack = createStackNavigator()
 
-const MainNavigator: React.FC = () => {
+const HomeNavigator: React.FC = () => {
   const { Navigator, Screen } = HomeStack
 
   return (
@@ -15,4 +15,4 @@ const MainNavigator: React.FC = () => {
   )
 }
 
-export default MainNavigator
+export default HomeNavigator

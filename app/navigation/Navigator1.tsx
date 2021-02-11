@@ -4,8 +4,6 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { Splash } from '../screens'
 import TabNavigator from './TabNavigator'
 
-// Each navigator needs to have it's own stack
-// Why?
 const MainStack = createStackNavigator()
 
 const MainNavigator: React.FC = () => {

@@ -24,7 +24,6 @@ export interface HomeProps {
 const Home: React.FC<HomeProps> = ({ navigation }) => {
   const screen = Dimensions.get('window')
 
-  console.log(screen.width)
   return (
     <View>
       <ImageBackground

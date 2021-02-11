@@ -9,11 +9,13 @@ import {
   Settings,
   BoatInformation,
   Definition,
+  Home,
+  Profile,
 } from '../screens'
-import HomeNavigator from './HomeNavigator'
 import { createStackNavigator } from '@react-navigation/stack'
 
 const TabStack = createBottomTabNavigator()
+const HomeStack = createStackNavigator()
 const BoatStack = createStackNavigator()
 const TermsStack = createStackNavigator()
 
@@ -21,7 +23,7 @@ const BoatNavigator = () => {
   const { Navigator, Screen } = BoatStack
 
   return (
-    <Navigator>
+    <Navigator initialRouteName="BoatList">
       <Screen name="BoatList" component={Boats} />
       <Screen name="BoatInformation" component={BoatInformation} />
     </Navigator>
@@ -32,13 +34,23 @@ const TermsNavigator = () => {
   const { Navigator, Screen } = TermsStack
 
   return (
-    <Navigator>
+    <Navigator initialRouteName="TerminologyList">
       <Screen name="TerminologyList" component={Terminology} />
       <Screen name="Definition" component={Definition} />
     </Navigator>
   )
 }
 
+const HomeNavigator = () => {
+  const { Navigator, Screen } = HomeStack
+
+  return (
+    <Navigator headerMode="none" initialRouteName="HomeFeed">
+      <Screen name="HomeFeed" component={Home} />
+      <Screen name="Profile" component={Profile} />
+    </Navigator>
+  )
+}
 interface TabContainerProps {
   label?: string
   focused?: boolean
@@ -125,8 +137,8 @@ const TabNavigator = () => {
       })}
     >
       <Screen name="Home" component={HomeNavigator} />
-      <Screen name="Terminology" component={TermsNavigator} />
       <Screen name="Boats" component={BoatNavigator} />
+      <Screen name="Terminology" component={TermsNavigator} />
       <Screen name="Settings" component={Settings} />
     </Navigator>
   )
