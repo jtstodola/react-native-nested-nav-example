@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { CompositeNavigationProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 import { Dimensions, ImageBackground, Text, View } from 'react-native'
 
 import Images from '../../assets/images'
+import { TabNavigatorParamsList, RootNavigatorParamsList } from '../../types'
 import { styles } from './styles'
 
-export interface HelloProps {
-  name: string
-  enthusiasmLevel?: number
+export interface SettingsProps {
+  navigation: CompositeNavigationProp<
+    StackNavigationProp<TabNavigatorParamsList, 'Settings'>,
+    StackNavigationProp<RootNavigatorParamsList>
+  >
 }
 
-const Settings: React.FC<HelloProps> = () => {
+const Settings: React.FC<SettingsProps> = () => {
   const screen = Dimensions.get('window')
   return (
     <View>

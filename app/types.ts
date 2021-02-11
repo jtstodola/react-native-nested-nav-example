@@ -1,11 +1,7 @@
-import {
-  CompositeNavigationProp,
-  NavigatorScreenParams,
-} from '@react-navigation/native'
-import { StackNavigationProp } from '@react-navigation/stack'
 import { ImageURISource } from 'react-native'
+import { NavigatorScreenParams } from '@react-navigation/native'
 
-export interface BoatParams {
+export type BoatParams = {
   name: string
   text: string
   image: ImageURISource
@@ -21,8 +17,8 @@ export type ModalNavigatorParamsList = {
 // to access the nested route
 export type RootNavigatorParamsList = {
   Splash: undefined
-  Modal: NavigatorScreenParams<ModalNavigatorParamsList>
   Tabs: undefined
+  Modal: NavigatorScreenParams<ModalNavigatorParamsList>
 }
 
 export type TabNavigatorParamsList = {
@@ -34,7 +30,3 @@ export type TabNavigatorParamsList = {
 }
 
 // This will give us access to the Modal screens from the Tab Navigator
-export type RootNavigationProps = CompositeNavigationProp<
-  StackNavigationProp<TabNavigatorParamsList>,
-  StackNavigationProp<RootNavigatorParamsList>
->

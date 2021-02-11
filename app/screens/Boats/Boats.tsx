@@ -1,3 +1,5 @@
+import { CompositeNavigationProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
 import {
   Dimensions,
@@ -9,7 +11,11 @@ import {
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import Images from '../../assets/images'
-import { BoatParams, RootNavigationProps } from '../../types'
+import {
+  BoatParams,
+  RootNavigatorParamsList,
+  TabNavigatorParamsList,
+} from '../../types'
 import boats from './boatList'
 import { styles } from './styles'
 
@@ -34,7 +40,10 @@ const Button: React.FC<ButtonProps> = ({ children, onPress }) => {
   )
 }
 interface BoatsProps {
-  navigation: RootNavigationProps
+  navigation: CompositeNavigationProp<
+    StackNavigationProp<TabNavigatorParamsList, 'Boats'>,
+    StackNavigationProp<RootNavigatorParamsList>
+  >
 }
 
 const Boats: React.FC<BoatsProps> = ({ navigation }) => {

@@ -1,3 +1,5 @@
+import { CompositeNavigationProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
 import {
   Dimensions,
@@ -9,11 +11,14 @@ import {
 import { Icon } from 'react-native-elements'
 
 import Images from '../../assets/images'
-import { RootNavigationProps } from '../../types'
+import { RootNavigatorParamsList, TabNavigatorParamsList } from '../../types'
 import { styles } from './styles'
 
 export interface HomeProps {
-  navigation: RootNavigationProps
+  navigation: CompositeNavigationProp<
+    StackNavigationProp<TabNavigatorParamsList, 'Home'>,
+    StackNavigationProp<RootNavigatorParamsList>
+  >
 }
 
 const Home: React.FC<HomeProps> = ({ navigation }) => {

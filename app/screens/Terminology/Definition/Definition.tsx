@@ -1,14 +1,13 @@
-import { RouteProp } from '@react-navigation/native'
 import React from 'react'
-import { Dimensions, Text, View } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { Dimensions, Text, TouchableOpacity, View } from 'react-native'
+import { RouteProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 
-import Images from '../../../assets/images'
-import { RootNavigationProps, ModalNavigatorParamsList } from '../../../types'
+import { ModalNavigatorParamsList } from '../../../types'
 import { styles } from './styles'
 
 export interface DefinitionProps {
-  navigation: RootNavigationProps
+  navigation: StackNavigationProp<ModalNavigatorParamsList, 'Definition'>
   route: RouteProp<ModalNavigatorParamsList, 'Definition'>
 }
 

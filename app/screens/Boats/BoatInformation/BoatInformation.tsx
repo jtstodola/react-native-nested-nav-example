@@ -1,4 +1,3 @@
-import { RouteProp } from '@react-navigation/native'
 import React from 'react'
 import {
   Dimensions,
@@ -6,16 +5,18 @@ import {
   ImageBackground,
   ScrollView,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { RouteProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 
 import Images from '../../../assets/images'
-import { RootNavigationProps, ModalNavigatorParamsList } from '../../../types'
+import { ModalNavigatorParamsList } from '../../../types'
 import { styles } from './styles'
 
 export interface BoatInformationProps {
-  navigation: RootNavigationProps
+  navigation: StackNavigationProp<ModalNavigatorParamsList, 'BoatInformation'>
   route: RouteProp<ModalNavigatorParamsList, 'BoatInformation'>
 }
 

@@ -11,10 +11,15 @@ import {
 import Images from '../../assets/images'
 import terms from './terms'
 import { styles } from './styles'
-import { RootNavigationProps } from '../../types'
+import { RootNavigatorParamsList, TabNavigatorParamsList } from '../../types'
+import { CompositeNavigationProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 
 export interface TerminologyProps {
-  navigation: RootNavigationProps
+  navigation: CompositeNavigationProp<
+    StackNavigationProp<TabNavigatorParamsList, 'Terminology'>,
+    StackNavigationProp<RootNavigatorParamsList>
+  >
 }
 
 const Terminology: React.FC<TerminologyProps> = ({ navigation }) => {

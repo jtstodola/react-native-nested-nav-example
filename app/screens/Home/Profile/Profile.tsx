@@ -1,3 +1,5 @@
+import { CompositeNavigationProp } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
 import {
   Dimensions,
@@ -10,7 +12,7 @@ import {
 import { Icon } from 'react-native-elements'
 
 import Images from '../../../assets/images'
-import { RootNavigationProps } from '../../../types'
+import { RootNavigatorParamsList, TabNavigatorParamsList } from '../../../types'
 import userProfile from './userProfile'
 
 interface RowProps {
@@ -34,7 +36,10 @@ const Row: React.FC<RowProps> = ({ label, value }) => {
 }
 
 interface ProfileProps {
-  navigation: RootNavigationProps
+  navigation: CompositeNavigationProp<
+    StackNavigationProp<TabNavigatorParamsList, 'Profile'>,
+    StackNavigationProp<RootNavigatorParamsList>
+  >
 }
 
 const Profile: React.FC<ProfileProps> = ({ navigation }) => {
