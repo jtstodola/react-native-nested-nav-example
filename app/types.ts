@@ -15,9 +15,13 @@ export type ModalNavigatorParamsList = {
 
 // when we have a nested params list, we need to wrap it in NavigatorScreenParams in order
 // to access the nested route
-export type RootNavigatorParamsList = {
+export type TopNavigatorParamsList = {
   Splash: undefined
   Tabs: undefined
+}
+
+export type RootNavigatorParamsList = {
+  Top: NavigatorScreenParams<TopNavigatorParamsList>
   Modal: NavigatorScreenParams<ModalNavigatorParamsList>
 }
 
@@ -28,5 +32,3 @@ export type TabNavigatorParamsList = {
   Boats: undefined
   Settings: undefined
 }
-
-// This will give us access to the Modal screens from the Tab Navigator

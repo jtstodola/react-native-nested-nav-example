@@ -3,11 +3,19 @@ import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack'
+import { RouteProp } from '@react-navigation/native'
 
 import { Splash } from '../screens'
 import TabNavigator from './TabNavigator'
+// import TabNavigator from './TabNavigator1'
 import ModalNavigator from './ModalNavigator'
+import {
+  ModalNavigatorParamsList,
+  RootNavigatorParamsList,
+  TopNavigatorParamsList,
+} from '../types'
 
+//
 const modalScreenOptions: StackNavigationOptions = {
   cardOverlayEnabled: true,
   cardStyle: { backgroundColor: 'transparent', opacity: 1 },
@@ -30,8 +38,11 @@ const modalScreenOptions: StackNavigationOptions = {
 
 // Each navigator needs to have it's own stack
 // Why?
-const MainStack = createStackNavigator()
-const TopStack = createStackNavigator()
+
+// In order to type the below route for the screen options,
+// send the type arguement when creating the navigator
+const MainStack = createStackNavigator<RootNavigatorParamsList>()
+const TopStack = createStackNavigator<TopNavigatorParamsList>()
 
 const TopNavigator: React.FC = () => {
   const { Navigator, Screen } = TopStack
