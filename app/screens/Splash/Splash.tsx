@@ -1,17 +1,13 @@
-import { CompositeNavigationProp } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 import Images from '../../assets/images'
 
-import { RootNavigatorParamsList, TopNavigatorParamsList } from '../../types'
+import { TopNavigatorParamsList } from '../../types'
 import styles from './styles'
 
 export interface SplashProps {
-  navigation: CompositeNavigationProp<
-    StackNavigationProp<TopNavigatorParamsList, 'Tabs'>,
-    StackNavigationProp<RootNavigatorParamsList>
-  >
+  navigation: StackNavigationProp<TopNavigatorParamsList, 'Splash'>
 }
 
 const Splash: React.FC<SplashProps> = ({ navigation }) => {

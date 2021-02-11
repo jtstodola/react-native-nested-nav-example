@@ -15,10 +15,7 @@ import { RootNavigatorParamsList, TabNavigatorParamsList } from '../../types'
 import { styles } from './styles'
 
 export interface HomeProps {
-  navigation: CompositeNavigationProp<
-    StackNavigationProp<TabNavigatorParamsList, 'Home'>,
-    StackNavigationProp<RootNavigatorParamsList>
-  >
+  navigation: StackNavigationProp<TabNavigatorParamsList, 'Home'>
 }
 
 const Home: React.FC<HomeProps> = ({ navigation }) => {

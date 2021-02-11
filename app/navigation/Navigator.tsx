@@ -33,9 +33,6 @@ const modalScreenOptions: StackNavigationOptions = {
   }),
 }
 
-// Each navigator needs to have it's own stack
-// Why?
-
 // In order to type the below route for the screen options,
 // send the type arguement when creating the navigator
 const RootStack = createStackNavigator<RootNavigatorParamsList>()
