@@ -7,23 +7,9 @@ import {
   DrawerContentOptions,
   DrawerContentComponentProps,
 } from '@react-navigation/drawer'
+import { Icon } from 'react-native-elements'
 
 import Images from '../assets/images'
-import { Avatar, Icon, Logo } from '../components'
-
-const NavIcon = () => {
-  return (
-    <Icon
-      iconName="circle"
-      iconType="font-awesome"
-      iconProps={{
-        color: '#0078CE',
-        size: 10,
-        style: { paddingTop: 11 },
-      }}
-    />
-  )
-}
 
 interface NavigationProps {
   label: string
@@ -51,9 +37,7 @@ const DrawerContent: FunctionComponent<DrawerContentProps> = ({
           height: 80,
         }}
       >
-        <Logo style={{ marginRight: 12 }}>
-          <Images.logo height={40} width={40} />
-        </Logo>
+        <Images.logo height={40} width={40} />
 
         <TouchableOpacity
           onPress={() => navigation.dispatch(DrawerActions.closeDrawer())}
@@ -70,7 +54,17 @@ const DrawerContent: FunctionComponent<DrawerContentProps> = ({
               label={sideNav.label}
               labelStyle={{ marginLeft: -8 }}
               onPress={() => navigation.navigate(sideNav.location)}
-              icon={() => <NavIcon />}
+              icon={() => (
+                <Icon
+                  name="circle"
+                  type="font-awesome"
+                  size={10}
+                  style={{
+                    color: '#0078CE',
+                    paddingTop: 11,
+                  }}
+                />
+              )}
             />
           )
         })}
@@ -85,7 +79,6 @@ const DrawerContent: FunctionComponent<DrawerContentProps> = ({
           marginBottom: 32,
         }}
       >
-        <Avatar source={Images.background2} style={{ marginRight: 16 }} />
         <Text style={{ textAlign: 'left' }}>Jane Doe</Text>
       </View>
     </View>

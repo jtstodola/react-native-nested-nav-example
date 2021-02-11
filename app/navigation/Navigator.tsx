@@ -9,11 +9,7 @@ import { Splash } from '../screens'
 import TabNavigator from './TabNavigator'
 // import TabNavigator from './TabNavigator1'
 import ModalNavigator from './ModalNavigator'
-import {
-  ModalNavigatorParamsList,
-  RootNavigatorParamsList,
-  TopNavigatorParamsList,
-} from '../types'
+import { RootNavigatorParamsList, TopNavigatorParamsList } from '../types'
 
 //
 const modalScreenOptions: StackNavigationOptions = {
